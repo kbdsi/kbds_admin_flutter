@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:kbds_admin_flutter/screens/city_screen.dart';
-import 'package:kbds_admin_flutter/screens/country_screen.dart';
-import 'package:kbds_admin_flutter/screens/district_screen.dart';
-import 'package:kbds_admin_flutter/screens/parameter_screen.dart';
-import 'package:kbds_admin_flutter/screens/postal_screen.dart';
-import 'package:kbds_admin_flutter/screens/province_screen.dart';
-import 'package:kbds_admin_flutter/screens/village_screen.dart';
+import 'package:kbds_admin_flutter/screens/city/city_screen.dart';
+import 'package:kbds_admin_flutter/screens/country/country_screen.dart';
+import 'package:kbds_admin_flutter/screens/district/district_screen.dart';
+import 'package:kbds_admin_flutter/screens/parameter/parameter_screen.dart';
+import 'package:kbds_admin_flutter/screens/postal/postal_screen.dart';
+import 'package:kbds_admin_flutter/screens/province/province_screen.dart';
+import 'package:kbds_admin_flutter/screens/village/village_screen.dart';
 
 class NavBar extends StatelessWidget {
   Function(Widget, String) changeScreen;
