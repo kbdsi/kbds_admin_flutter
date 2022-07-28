@@ -1,7 +1,10 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:kbds_admin_flutter/screens/city/city_screen.dart';
 import 'package:kbds_admin_flutter/screens/country/country_screen.dart';
+import 'package:kbds_admin_flutter/screens/province/province_screen.dart';
 import 'package:kbds_admin_flutter/widgets/custom_appbar.dart';
 import 'package:kbds_admin_flutter/widgets/navbar.dart';
 
@@ -15,10 +18,14 @@ class KbdsAdmin extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MainScaffold(),
+      routes: {
+        "CountryScreen": (context) => CountryScreen(),
+        "ProvinceScreen": (context) => ProvinceScreen(),
+        "CityScreen": (context) => CityScreen(),
+      },
     );
   }
 }
