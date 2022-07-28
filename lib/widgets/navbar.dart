@@ -46,65 +46,73 @@ class NavBar extends StatelessWidget {
                     fit: BoxFit.cover),
               ),
             ),
-            ListTile(
-              leading: Icon(Icons.arrow_forward_sharp),
-              title: Text('Parameter'),
-              onTap: () {
-                changeScreen(ParameterScreen(), "Parameter");
+            ExpansionTile(
+              title: Text("Maintenance"),
+              initiallyExpanded: true,
+              iconColor: Colors.blue,
+              textColor: Colors.blue,
+              children: [
+                ListTile(
+                  leading: Icon(Icons.arrow_forward_sharp),
+                  title: Text('Parameter'),
+                  onTap: () {
+                    changeScreen(ParameterScreen(), "Parameter");
 
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.arrow_forward_sharp),
-              title: Text('Country'),
-              onTap: () {
-                changeScreen(CountryScreen(), "Country");
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.arrow_forward_sharp),
-              title: Text('Province'),
-              onTap: () {
-                changeScreen(ProvinceScreen(), "Province");
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.arrow_forward_sharp),
-              title: Text('City'),
-              onTap: () {
-                changeScreen(CityScreen(), "City");
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.arrow_forward_sharp),
-              title: Text('District'),
-              onTap: () {
-                changeScreen(DistrictScreen(), "District");
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.arrow_forward_sharp),
+                  title: Text('Country'),
+                  onTap: () {
+                    changeScreen(CountryScreen(), "Country");
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.arrow_forward_sharp),
+                  title: Text('Province'),
+                  onTap: () {
+                    changeScreen(ProvinceScreen(), "Province");
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.arrow_forward_sharp),
+                  title: Text('City'),
+                  onTap: () {
+                    changeScreen(CityScreen(), "City");
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.arrow_forward_sharp),
+                  title: Text('District'),
+                  onTap: () {
+                    changeScreen(DistrictScreen(), "District");
 
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.arrow_forward_sharp),
-              title: Text('Village'),
-              onTap: () {
-                changeScreen(VillageScreen(), "Village");
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.arrow_forward_sharp),
+                  title: Text('Village'),
+                  onTap: () {
+                    changeScreen(VillageScreen(), "Village");
 
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.arrow_forward_sharp),
-              title: Text('Postal'),
-              onTap: () {
-                changeScreen(PostalScreen(), "Postal");
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.arrow_forward_sharp),
+                  title: Text('Postal'),
+                  onTap: () {
+                    changeScreen(PostalScreen(), "Postal");
 
-                Navigator.pop(context);
-              },
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
             ),
             AboutListTile(
               applicationLegalese: "© 2022 PT. KB Data Systems Indonesia",
