@@ -115,6 +115,29 @@ class NavBar extends StatelessWidget {
                 SizedBox(height: 25)
               ],
             ),
+            ExpansionTile(
+              title: Text("Security"),
+              initiallyExpanded: false,
+              iconColor: Colors.blue,
+              textColor: Colors.blue,
+              children: [
+                ListTile(
+                  leading: Icon(Icons.arrow_forward_sharp),
+                  title: Text('Screen A'),
+                  onTap: () {},
+                ),
+                ListTile(
+                  leading: Icon(Icons.arrow_forward_sharp),
+                  title: Text('Screen B'),
+                  onTap: () {},
+                ),
+                ListTile(
+                  leading: Icon(Icons.arrow_forward_sharp),
+                  title: Text('Screen C'),
+                  onTap: () {},
+                ),
+              ],
+            ),
             AboutListTile(
               applicationLegalese: "© 2022 PT. KB Data Systems Indonesia",
               applicationName: "KBDS Admin",
