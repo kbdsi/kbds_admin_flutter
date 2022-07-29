@@ -112,6 +112,7 @@ class NavBar extends StatelessWidget {
                     Navigator.pop(context);
                   },
                 ),
+                SizedBox(height: 25)
               ],
             ),
             AboutListTile(
