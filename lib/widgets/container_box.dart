@@ -6,12 +6,15 @@ import 'package:kbds_admin_flutter/widgets/subwidgets/search_by.dart';
 
 class ContainerBox extends StatelessWidget {
   final String title;
+  final Widget child;
 
-  const ContainerBox({required this.title});
+  const ContainerBox({required this.title, required this.child});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(bottom: 15),
+      margin: EdgeInsets.only(left: 10, right: 10, top: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: Colors.white,
@@ -24,7 +27,6 @@ class ContainerBox extends StatelessWidget {
           ),
         ],
       ),
-      margin: EdgeInsets.only(left: 10, right: 10, top: 20),
       child: Column(
         children: [
           Container(
@@ -34,29 +36,34 @@ class ContainerBox extends StatelessWidget {
                 bottom: BorderSide(width: 1, color: Colors.grey[300]!),
               ),
             ),
-            child: Container(
-              padding: const EdgeInsets.all(10),
-              child: Text(
-                title,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue[600],
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(15),
+                  child: Text(
+                    title,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue[600],
+                    ),
+                  ),
                 ),
-              ),
+                if (title == 'Listing')
+                  Container(
+                    margin: EdgeInsets.only(right: 15),
+                    child: OutlinedButton(
+                      style: OutlinedButton.styleFrom(),
+                      onPressed: () {},
+                      child: Text('Add New'),
+                    ),
+                  ),
+              ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(20),
-            child: Column(
-              children: [
-                GenericInputField(
-                  inputTitle: "Search By",
-                  inputWidget: SearchBy(),
-                ),
-                GenericInputField(
-                    inputTitle: "Country", inputWidget: CustomTextInput())
-              ],
-            ),
+            child: child,
           ),
         ],
       ),
